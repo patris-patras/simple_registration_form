@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/devchallenges.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resgistration form</title>
+  </head>
+  <body>
+    <div class="background-overlay">
+      <div class="container">
+        <div class="logo-container">
+          <img src="./img/behold-logo.png" alt="logo" />
+        </div>
+
+        <div class="panel-container">
+          <div class="panel">
+            <h1 class="panel__heading">Create an account</h1>
+
+            <p class="panel__subheading">
+              Already have an account? <a href="#">Sign in</a>
+            </p>
+
+            <form onsubmit="alert('Success!')">
+              <div class="input">
+                <label for="email-address">Email address</label>
+                <input type="email" id="email-address" required />
+
+                <div class="input__indicator"></div>
+              </div>
+
+              <div class="name">
+                <div class="input">
+                  <label for="first-name">First name</label>
+                  <input type="text" id="first-name" required />
+                  <div class="input__indicator"></div>
+                </div>
+
+                <div class="input">
+                  <label for="last-name">Last name</label>
+                  <input type="text" id="last-name" required />
+                  <div class="input__indicator"></div>
+                </div>
+
+                <div class="input__indicator"></div>
+              </div>
+
+              <div class="input">
+                <label for="password">Password</label>
+                <input type="password" id="password" required />
+
+                <div class="input__indicator"></div>
+              </div>
+
+              <div class="date-of-birth">
+                <h5 class="date-of-birth__heading">Date of birth</h5>
+
+                <div class="date-of-birth__inputs">
+                  <div class="dropdown">
+                    <label for="month">Month</label>
+                    <select name="month" id="month">
+                      <optgroup>
+                        <option value="jan">jan</option>
+                        <option value="feb">feb</option>
+                        <option value="march">march</option>
+                        <option value="april">april</option>
+                      </optgroup>
+                    </select>
+                  </div>
+
+                  <div class="input">
+                    <label for="day">Day</label>
+                    <input type="number" id="day" min="1" max="31" required />
+
+                    <div class="input__indicator"></div>
+                  </div>
+
+                  <div class="input">
+                    <label for="year">Yar</label>
+                    <input
+                      type="number"
+                      id="year"
+                      min="1980"
+                      max="2020"
+                      required
+                    />
+                    <div class="input__indicator"></div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="consents">
+                By clicking Create account, I agree that I have read and
+                accepted the <a href="">Terms of Use</a> and
+                <a href="">Privacy Policy</a>.
+              </p>
+
+              <button type="submit">Create account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let images = ['fall.jpeg', 'leaf.jpeg', 'flowerPlant.jpeg'];
+
+      function changeBackground() {
+        let randomNumber = Math.floor(Math.random() * images.length);
+
+        document.body.style.backgroundImage =
+          'url(img/' + images[randomNumber] + ')';
+      }
+
+      window.onload = changeBackground;
+    </script>
+  </body>
+</html>
